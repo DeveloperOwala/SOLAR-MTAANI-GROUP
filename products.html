@@ -37,10 +37,14 @@
     </nav>
     <!-- =================     END  HEADER   (NAV BAT PART)     ================= -->
 
+    <div class="pt-5">
+        <p>
+            <!-- INTENTIONALLY LEFT BLANK -->
+        </p>
+    </div>
 
-
-    <!-- =================     SECTION 1   (...)     ================= -->    
-    <section class="">
+    <!-- =================     SECTION 1   (Products, Descriptions, Prices, Add-Cart-Btn)     ================= -->    
+    <section class="pt-3 pb-5">
         <div class="container">
             <div class="row">
                 <div class="col p-2">
@@ -219,7 +223,37 @@
 
 
 
-    <!-- =================     SECTION 2   (...)     ================= -->
+    <!-- =================     SECTION 2   (Show Selected Items in Cart)     ================= -->
+    <section class="pt-3 pb-3">
+        <div class="container bg-secondary rounded">
+            <div class="text-center p-2">
+                <h4>My Shopping Busket</h4>
+            </div>
+            <div class="displayTable">
+                <table class="table table-responsive order-table">
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Size</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="6" class="empty-cart text-center">
+                                <!-- <img src="" alt="Empty cart image"> <br> -->
+                                Your cart is empty!
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="p-2 text-end">
+                    <p class="grand-total">Total Price: Ksh <span class="text-bold">0</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- =================     END  SECTION 2   (...)     ================= -->
 
 
@@ -284,7 +318,7 @@
                 </div>
             </div>
             <div class="text-center pt-5">
-                <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> <a href="index.html">Solar Mtaani</a>, All Right Reserved</p>
+                <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> <a href="index.html">Solar Mtaani.</a> All Right Reserved</p>
             </div>
         </div>
     </footer>
