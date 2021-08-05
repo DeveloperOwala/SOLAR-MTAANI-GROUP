@@ -1,0 +1,36 @@
+
+#navbar_top, #footerFFF{
+    background-color: rgba(71, 151, 103, 1);
+}
+#linkColHov p a{
+    text-decoration: none;
+    color: white;
+}
+#linkColHov p a:hover {
+    text-decoration: none;
+    color: rgb(24, 42, 197);
+    font-size: 25px;
+}
+.topimg {
+    text-align: center;
+    background-image: url(./home-assets/solar-top.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 500px;
+    height: 100px;
+    width: 100%;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.rectangle {
+    position: absolute;
+    width: 781px;
+    height: 100px;
+    left: 310px;
+    top: 134px;
+    background: rgba(196, 196, 196, 0.5);
+}
+img {
+    box-shadow: 5px 5px 5px grey;
+ 
+}
