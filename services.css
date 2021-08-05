@@ -1,0 +1,36 @@
+#navbar_top, #footerFFF{
+    background-color: rgba(71, 151, 103, 1);
+}
+#linkColHov p a{
+    text-decoration: none;
+    color: white;
+}
+#linkColHov p a:hover {
+    text-decoration: none;
+    color: rgb(24, 42, 197);
+    font-size: 25px;
+}
+
+#servicesnsubscribe{
+    border-radius:10px;
+}
+
+#services{
+    border-radius:10px;
+}
+
+#subscription{
+    border-radius:10px;
+}
+
+#column1{
+    border-radius:10px;
+}
+
+#column2{
+    border-radius:10px;
+}
+
+#columnSmall{
+    border-radius:10px;
+}
