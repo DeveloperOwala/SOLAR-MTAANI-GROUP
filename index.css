@@ -16,7 +16,7 @@
     background-image: url(./home-assets/solar-top.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 400px;
+    padding-top: 500px;
     height: 100px;
     width: 100%;
     box-shadow: 5px 5px 5px grey;
@@ -29,4 +29,8 @@
     left: 310px;
     top: 134px;
     background: rgba(196, 196, 196, 0.5);
+}
+img {
+    box-shadow: 5px 5px 5px grey;
+ 
 }
