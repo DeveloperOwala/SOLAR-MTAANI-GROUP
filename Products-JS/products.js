@@ -1,57 +1,172 @@
-var myInput = document.getElementById("psw");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var number = document.getElementById("number");
-var length = document.getElementById("length");
+// Declairing objects
 
-// When the user clicks on the password field, show the message box
-myInput.onfocus = function() {
-  document.getElementById("message").style.display = "block";
+function pizza(name) {
+  this.pizzaName = name;
 }
 
-// When the user clicks outside of the password field, hide the message box
-myInput.onblur = function() {
-  document.getElementById("message").style.display = "none";
+
+pizza.prototype.nameSize = function() {
+  if (this.pizzaName === "Cheeseburger.") {
+      return "Cheeseburger.";
+  }else if(this.pizzaName === "Meat-Deluxe.") {
+      return "Meat-Deluxe.";
+  }else if(this.pizzaName === "Hawaiian-BBQ.") {
+      return "Hawaiian-BBQ.";
+  }else if(this.pizzaName === "Crispy pizza.") {
+      return "Crispy pizza.";
+  }else if(this.pizzaName === "Stuffed-pizza.") {
+      return "Stuffed-pizza.";
+  }else if(this.pizzaName === "Gluten-free.") {
+      return "Gluten-free.";
+  }else if(this.pizzaName === "veggie-feast.") {
+      return "veggie-feast.";
+  }else if(this.pizzaName === "Meat-Deluxe.") {
+      return "Meat-Deluxe.";
+  }else {
+      alert("You MUST choose the pizza category");
+  };
 }
 
-// When the user starts to type something inside the password field
-myInput.onkeyup = function() {
-  // Validate lowercase letters
-  var lowerCaseLetters = /[a-z]/g;
-  if(myInput.value.match(lowerCaseLetters)) {  
-    letter.classList.remove("invalid");
-    letter.classList.add("valid");
+function size(name) {
+  this.sizeName = name;
+}
+
+size.prototype.priceSize = function() {
+  if (this.sizeName === "large") {
+      // alert("Large");
+      return 1500;
+  } else if(this.sizeName === "medium") {
+      // alert("Not large");
+      return 1150;
+  } else if(this.sizeName === "small") {
+      return 900;
   } else {
-    letter.classList.remove("valid");
-    letter.classList.add("invalid");
+      alert("Please select a pizza size");
   }
+}
+
+function crust(name) {
+  this.crustName = name;
+}
+
+crust.prototype.crustPrice = function() {
+  if (this.crustName === "cheese") {
+      // alert("cheese");
+      return 100;
+  } else if (this.crustName === "thin") {
+      return 70;
+  } else if (this.crustName === "neapolitan") {
+      return 120;
+  } else {
+      alert("Please select a prefferable crust to continue");
+  }
+}
+
+function topping(name) {
+  this.toppingName = name;
+}
+
+topping.prototype.toppingPrice = function() {
+  if (this.toppingName === "Pepperoni") {
+      return 10;
+  } else if (this.toppingName === "Mushrooms") {
+      return 40;
+  } else if (this.toppingName === "Onions") {
+      return 15;
+  } else if (this.toppingName === "Sausage") {
+      return 20;
+  } else if (this.toppingName === "Bacon") {
+      return 30;
+  } else if (this.toppingName === "Extra-cheese") {
+      return 10;
+  } else if (this.toppingName === "Black-olives") {
+      return 15;
+  } else if (this.toppingName === "Green-peppers") {
+      return 5;
+  } else {
+      alert("Please choose topping(s) of your choice");
+  }
+}
+
+
+
+function quantity(name) {
+  this.quantityName = name;
+}
+
+quantity.prototype.quantityPrice = function() {
+
+}
+
+$(document).ready(function() {
+  $("#delivery").click(function() {
+      alert("For to door deliveries. Please confirm by pressing ok to continue");
+      prompt("Please Enter your mobile number");
+      prompt("Enter your current location");
+  });
+});
+
+
+
+$(document).ready(function() {
+  $("#checkout").click(function() {
+      event.preventDefault();
+
+
+
+
+  var pizzaInput = $("#type").val();
+
+      pizzaSelect = new pizza(pizzaInput);
+      pizzaSelect.nameSize();
+      // alert(pizzaSelect.nameSize());
+
+  var sizeInput = $("#size").val();
+
+  var pizzaSize = new size(sizeInput);
+      pizzaSize.priceSize();
+      // alert(pizzaSize.priceSize());
+
+  var crustInput = $("#crust").val();
   
-  // Validate capital letters
-  var upperCaseLetters = /[A-Z]/g;
-  if(myInput.value.match(upperCaseLetters)) {  
-    capital.classList.remove("invalid");
-    capital.classList.add("valid");
-  } else {
-    capital.classList.remove("valid");
-    capital.classList.add("invalid");
-  }
+  var crustSize = new crust(crustInput);
+      crustSize.crustPrice();
+      // alert(crustSize.crustPrice());
 
-  // Validate numbers
-  var numbers = /[0-9]/g;
-  if(myInput.value.match(numbers)) {  
-    number.classList.remove("invalid");
-    number.classList.add("valid");
-  } else {
-    number.classList.remove("valid");
-    number.classList.add("invalid");
-  }
+
+  var toppingInput = $("#toppings").val();
+
+  var toppingSize = new topping(toppingInput);
+      toppingSize.toppingPrice();
+      // alert(toppingSize.toppingPrice());
+
+
+  var quantityInput = $("quantity").val();
+
+  var  quantitySize = new quantity (quantityInput);
+       quantitySize.quantityPrice();
+      //  alert(quantitySize.quantityPrice());
+
+ // calcTotal to calculate the total pizza summation
+
+  var pizzaPrice = (parseInt(parseInt(pizzaSize.priceSize()) + parseInt(crustSize.crustPrice()) + parseInt(toppingSize.toppingPrice())));
+  $("#summation").append(pizzaPrice);
+
+  // S-size, C-crust, T-toppings N-name
+
+  var pizzaS = (pizzaSize.priceSize());
+  $("#psize").append(pizzaS);
+
+  var pizzaC = (crustSize.crustPrice());
+  $("#cprice").append(pizzaC);
+
+  var pizzaT = (toppingSize.toppingPrice());
+  $("#tprice").append(pizzaT);
+
+  var pizzaN = (pizzaSelect.nameSize());
+  $("#ptype").append(pizzaN);
+  event.preventDefault();
   
-  // Validate length
-  if(myInput.value.length >= 8) {
-    length.classList.remove("invalid");
-    length.classList.add("valid");
-  } else {
-    length.classList.remove("valid");
-    length.classList.add("invalid");
-  }
-}
+  });
+})
+
