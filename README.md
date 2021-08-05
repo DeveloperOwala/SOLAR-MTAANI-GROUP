@@ -3,7 +3,7 @@
 #### By **{Mtaani Developers}**
 ## Description
 { Pizza Mtaani is a leading solar outlet in  Kenya serving several residents accross the country
- by providing efficient way of placing an order through online application!. }
+ by providing efficient way of purchasing through online application!. }
 ## Setup/Installation Requirements
 * Download an .exe file.
 * Locate and double-click the .exe file. (It will usually be in your Downloads folder.)
