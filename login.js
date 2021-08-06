@@ -39,9 +39,5 @@ form.onsubmit = (e)=>{
   //if eField and pField doesn't contains error class that mean user filled details properly
   if(!eField.classList.contains("error") && !pField.classList.contains("error")){
     window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
-  }
-  //login alert
-   function loginfunc(){
-      alert(" ! Please log in first");
-};
+  };
 };
