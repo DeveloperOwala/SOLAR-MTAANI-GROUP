@@ -41,3 +41,7 @@ form.onsubmit = (e)=>{
     window.location.href = form.getAttribute("action"); //redirecting user to the specified url which is inside action attribute of form tag
   };
 };
+
+function onLoginPage(){
+  alert("Please, login first! ")
+}
