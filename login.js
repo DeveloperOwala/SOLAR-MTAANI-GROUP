@@ -42,6 +42,14 @@ form.onsubmit = (e)=>{
   };
 };
 
-function onLoginPage(){
-  alert("Please, login first! ")
+
+// LOGIN ALERT
+function onHomePage(){
+  alert("Please, login first to view our Home Page contents!")
+}
+function onProductsPage(){
+  alert("Please, login first to view Our Products!")
+}
+function onServicesPage(){
+  alert("Please, login first to view Services and Subscription Page!")
 }
