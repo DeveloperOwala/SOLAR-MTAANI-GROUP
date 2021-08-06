@@ -16,7 +16,7 @@ body {
 
 #linkColHov p a:hover {
     text-decoration: none;
-    color: rgb(24, 42, 197);laurielawi12@gmail.com
+    color: rgb(24, 42, 197);
     font-size: 25px;
 }
 
@@ -34,7 +34,7 @@ body {
     height: 100%;
     position: absolute;
     padding: 90px 70px 50px 70px;
-    background: rgba(0, 77, 77, .9)
+    background-color: rgba(71, 151, 103, 1);
 }
 
 .login-snip .login,
